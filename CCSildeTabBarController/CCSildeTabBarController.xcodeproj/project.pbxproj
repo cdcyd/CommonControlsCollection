@@ -130,7 +130,7 @@
 		7C85FC2A1D6AB565002374C2 /* CCSildeTabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				7CA6B6561D6AB8FD00AA7728 /* SubController */,
+				7CA6B6561D6AB8FD00AA7728 /* SubViewController */,
 				7CA6B64F1D6AB8B000AA7728 /* Animation */,
 				7CA6B6481D6AB86C00AA7728 /* TabBarController */,
 				7C85FC2E1D6AB565002374C2 /* AppDelegate.h */,
@@ -193,7 +193,7 @@
 			name = Animation;
 			sourceTree = "<group>";
 		};
-		7CA6B6561D6AB8FD00AA7728 /* SubController */ = {
+		7CA6B6561D6AB8FD00AA7728 /* SubViewController */ = {
 			isa = PBXGroup;
 			children = (
 				7CA6B6571D6AB91800AA7728 /* BaseViewController.h */,
@@ -209,7 +209,7 @@
 				7CA6B6661D6AB96C00AA7728 /* 伍ViewController.h */,
 				7CA6B6671D6AB96C00AA7728 /* 伍ViewController.m */,
 			);
-			name = SubController;
+			name = SubViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
