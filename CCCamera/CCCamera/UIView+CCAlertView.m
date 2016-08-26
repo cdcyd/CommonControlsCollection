@@ -10,6 +10,7 @@
 
 @implementation UIView (CCAlertView)
 
+#pragma mark - 会自动消失提示框
 -(void)showAutoDismissAlert:(UIViewController *)vc message:(NSString *)message{
     [self showAutoDismissAlert:vc message:message delay:0.5f];
 }
@@ -32,25 +33,6 @@ static void(^completeBlock)(void);
                                     repeats:NO];
 }
 
--(void)showAlertView:(UIViewController *)vc message:(NSString *)message sure:(void(^)(UIAlertAction * act))sure cancel:(void(^)(UIAlertAction * act))cancel{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示"
-                                                                             message:message
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        if (cancel) {
-            cancel(action);
-        }
-    }];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        if (sure) {
-            sure(action);
-        }
-    }];
-    [alertController addAction:cancelAction];
-    [alertController addAction:okAction];
-    [vc presentViewController:alertController animated:YES completion:nil];
-}
-
 - (void)autoDismiss:(NSTimer *)timer
 {
     UIAlertController *alertController = [timer userInfo];
@@ -71,6 +53,36 @@ static void(^completeBlock)(void);
 - (BOOL)isCurrentViewControllerVisible:(UIViewController *)VC
 {
     return (VC.isViewLoaded && VC.view.window);
+}
+
+#pragma mark - 不会自动消失的提示框
+-(void)showAlertView:(UIViewController *)vc message:(NSString *)message sure:(void(^)(UIAlertAction * act))sure cancel:(void(^)(UIAlertAction * act))cancel{
+    [self showAlertView:vc title:@"提示" message:message sureTitle:@"确定" cancelTitle:@"取消" sure:sure cancel:cancel];
+}
+
+-(void)showAlertView:(UIViewController *)vc title:(NSString *)title message:(NSString *)message sureTitle:(NSString *)sureTitle cancelTitle:(NSString *)cancelTitle sure:(void(^)(UIAlertAction * act))sure cancel:(void(^)(UIAlertAction * act))cancel{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+                                                                             message:message
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    if (cancelTitle) {
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            if (cancel) {
+                cancel(action);
+            }
+        }];
+        [alertController addAction:cancelAction];
+    }
+    
+    if (sureTitle) {
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:sureTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if (sure) {
+                sure(action);
+            }
+        }];
+        [alertController addAction:okAction];
+    }
+    
+    [vc presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

@@ -37,6 +37,37 @@
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.frame = _frame;
     [self.view addSubview:imageView];
+    
+    
+    switch (_image.imageOrientation) {
+        case UIImageOrientationUp:
+            NSLog(@"UIImageOrientationUp");
+            break;
+        case UIImageOrientationDown:
+            NSLog(@"UIImageOrientationDown");
+            break;
+        case UIImageOrientationLeft:
+            NSLog(@"UIImageOrientationLeft");
+            break;
+        case UIImageOrientationRight:
+            NSLog(@"UIImageOrientationRight");
+            break;
+        case UIImageOrientationUpMirrored:
+            NSLog(@"UIImageOrientationUpMirrored");
+            break;
+        case UIImageOrientationDownMirrored:
+            NSLog(@"UIImageOrientationDownMirrored");
+            break;
+        case UIImageOrientationLeftMirrored:
+            NSLog(@"UIImageOrientationLeftMirrored");
+            break;
+        case UIImageOrientationRightMirrored:
+            NSLog(@"UIImageOrientationRightMirrored");
+            break;
+        default:
+            break;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

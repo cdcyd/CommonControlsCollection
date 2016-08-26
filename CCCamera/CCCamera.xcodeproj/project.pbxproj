@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C7E42BC1D6D943F0001AF0F /* UIView+CCHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E42BB1D6D943F0001AF0F /* UIView+CCHUD.m */; };
 		7C85FB771D6AAAE4002374C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FB761D6AAAE4002374C2 /* main.m */; };
 		7C85FB7A1D6AAAE4002374C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FB791D6AAAE4002374C2 /* AppDelegate.m */; };
 		7C85FB7D1D6AAAE4002374C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FB7C1D6AAAE4002374C2 /* ViewController.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C7E42BA1D6D943F0001AF0F /* UIView+CCHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CCHUD.h"; sourceTree = "<group>"; };
+		7C7E42BB1D6D943F0001AF0F /* UIView+CCHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CCHUD.m"; sourceTree = "<group>"; };
 		7C85FB721D6AAAE4002374C2 /* CCCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C85FB761D6AAAE4002374C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C85FB781D6AAAE4002374C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 		7C85FBBD1D6AAC7B002374C2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				7C7E42BA1D6D943F0001AF0F /* UIView+CCHUD.h */,
+				7C7E42BB1D6D943F0001AF0F /* UIView+CCHUD.m */,
 				7C85FBBE1D6AACA1002374C2 /* UIView+CCAlertView.h */,
 				7C85FBBF1D6AACA1002374C2 /* UIView+CCAlertView.m */,
 				7C85FBC11D6AACB9002374C2 /* UIView+CCAdditions.h */,
@@ -413,6 +418,7 @@
 				7C85FBB81D6AABC4002374C2 /* CCBaseNavigationController.m in Sources */,
 				7C85FBCB1D6AADBF002374C2 /* CCTools.m in Sources */,
 				7C85FBC61D6AACCD002374C2 /* UILabel+CCFont.m in Sources */,
+				7C7E42BC1D6D943F0001AF0F /* UIView+CCHUD.m in Sources */,
 				7C85FBD91D6AAECE002374C2 /* CCVideoPreview.m in Sources */,
 				7C85FBDC1D6AB380002374C2 /* CCBaseViewController.m in Sources */,
 				7C85FB7A1D6AAAE4002374C2 /* AppDelegate.m in Sources */,
@@ -644,6 +650,7 @@
 				7C85FBA41D6AAAE4002374C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C85FBA51D6AAAE4002374C2 /* Build configuration list for PBXNativeTarget "CCCameraTests" */ = {
 			isa = XCConfigurationList;
@@ -652,6 +659,7 @@
 				7C85FBA71D6AAAE4002374C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C85FBA81D6AAAE4002374C2 /* Build configuration list for PBXNativeTarget "CCCameraUITests" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +668,7 @@
 				7C85FBAA1D6AAAE4002374C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
