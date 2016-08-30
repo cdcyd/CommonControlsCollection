@@ -23,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"CCCamera";
-    self.dataSource = @[@"相机.CCCameraViewController"];
+    self.dataSource = @[@"相机.CCCameraViewController",
+                        @"gl相机.CCglCameraViewController"];
   
     [self.view addSubview:self.tableView];
 }
