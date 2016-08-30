@@ -26,6 +26,14 @@
     return self;
 }
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    return [self initWithImage:nil previewFrame:CGRectZero];
+}
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    return [self initWithImage:nil previewFrame:CGRectZero];
+}
+
 - (instancetype)init{
     @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Use -initWithImage: previewFrame:" userInfo:nil];
 }
@@ -34,40 +42,9 @@
     [super viewDidLoad];
     UIImageView *imageView = [[UIImageView alloc]initWithImage:_image];
     imageView.layer.masksToBounds = YES;
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
     imageView.frame = _frame;
     [self.view addSubview:imageView];
-    
-    
-    switch (_image.imageOrientation) {
-        case UIImageOrientationUp:
-            NSLog(@"UIImageOrientationUp");
-            break;
-        case UIImageOrientationDown:
-            NSLog(@"UIImageOrientationDown");
-            break;
-        case UIImageOrientationLeft:
-            NSLog(@"UIImageOrientationLeft");
-            break;
-        case UIImageOrientationRight:
-            NSLog(@"UIImageOrientationRight");
-            break;
-        case UIImageOrientationUpMirrored:
-            NSLog(@"UIImageOrientationUpMirrored");
-            break;
-        case UIImageOrientationDownMirrored:
-            NSLog(@"UIImageOrientationDownMirrored");
-            break;
-        case UIImageOrientationLeftMirrored:
-            NSLog(@"UIImageOrientationLeftMirrored");
-            break;
-        case UIImageOrientationRightMirrored:
-            NSLog(@"UIImageOrientationRightMirrored");
-            break;
-        default:
-            break;
-    }
-    
 }
 
 - (void)didReceiveMemoryWarning {

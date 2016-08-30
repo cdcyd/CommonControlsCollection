@@ -947,7 +947,7 @@ static const NSString *CameraAdjustingExposureContext;
 
 #pragma mark - UI
 - (void)setupUI{
-    self.previewView = [[CCVideoPreview alloc]initWithFrame:CGRectMake(0, 200, CD_SCREEN_WIDTH, 320)];
+    self.previewView = [[CCVideoPreview alloc]initWithFrame:CGRectMake(0, 64, CD_SCREEN_WIDTH, CD_SCREEN_HEIGHT-64-100)];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTapAction:)];
