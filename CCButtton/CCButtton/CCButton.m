@@ -42,6 +42,7 @@
 // 返回图片边界
 - (CGRect)imageRectForContentRect:(CGRect)contentRect{
     NSLog(@"图片边界:%@",NSStringFromCGRect(contentRect));
+    NSLog(@"title:%@",self.titleLabel.text);
     CGFloat imageWidth = MIN(contentRect.size.height - 20, contentRect.size.width);  
     return CGRectMake(contentRect.size.width/2 - imageWidth/2, 0, imageWidth, imageWidth); // 4 9 13 16 20
 }
