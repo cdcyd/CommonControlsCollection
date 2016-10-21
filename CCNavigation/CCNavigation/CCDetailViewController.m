@@ -22,7 +22,8 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [[ViewController sharedInstance] setSelectedIndex:0];; 
+    [[ViewController sharedInstance] setSelectedIndex:0];
+    [self.navigationController setViewControllers:@[[ViewController sharedInstance],self]];
 }
 
 -(void)backClick:(UIButton *)btn{

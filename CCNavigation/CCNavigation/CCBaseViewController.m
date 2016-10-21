@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     
     NSArray *viewControllers = self.navigationController.viewControllers;
     if (viewControllers.count > 1) {
