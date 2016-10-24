@@ -39,7 +39,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    NSLog(@"%@",@(self.pageIndex+1));
     self.parentViewController.parentViewController.title = [NSString stringWithFormat:@"%@ / %@", [@(self.pageIndex+1) stringValue], [@([[CCAssetManager sharedInstance] photoCount]) stringValue]];
 }
 

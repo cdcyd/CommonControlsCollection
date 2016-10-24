@@ -236,6 +236,7 @@
 				TargetAttributes = {
 					7CA6B6811D6ACD6100AA7728 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9C283KM7PP;
 					};
 					7CA6B69D1D6ACD6100AA7728 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -445,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9C283KM7PP;
 				INFOPLIST_FILE = CCCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyd.ios.CCCollectionView;
@@ -456,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9C283KM7PP;
 				INFOPLIST_FILE = CCCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyd.ios.CCCollectionView;
@@ -528,6 +531,7 @@
 				7CA6B6B41D6ACD6100AA7728 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CA6B6B51D6ACD6100AA7728 /* Build configuration list for PBXNativeTarget "CCCollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +540,7 @@
 				7CA6B6B71D6ACD6100AA7728 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CA6B6B81D6ACD6100AA7728 /* Build configuration list for PBXNativeTarget "CCCollectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +549,7 @@
 				7CA6B6BA1D6ACD6100AA7728 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

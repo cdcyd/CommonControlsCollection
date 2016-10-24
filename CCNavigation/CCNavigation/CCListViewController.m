@@ -19,9 +19,17 @@
     [super viewDidLoad];
     self.title = @"联系人列表";
     self.view.backgroundColor = [UIColor grayColor];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 60, 30);
+    button.center = self.view.center;
+    [button setTitle:@"跳转" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+-(void)btnClick:(UIButton *)btn{
     CCDetailViewController *DVC = [[CCDetailViewController alloc]init];
     [self.navigationController pushViewController:DVC animated:YES];
 }

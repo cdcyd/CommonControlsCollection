@@ -18,6 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 60, 30);
+    button.center = self.view.center;
+    [button setTitle:@"跳转" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -25,7 +33,7 @@
     [ViewController sharedInstance].title = @"联系人";
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+-(void)btnClick:(UIButton *)btn{
     CCListViewController *DVC = [[CCListViewController alloc]init];
     [self.navigationController pushViewController:DVC animated:YES];
 }
