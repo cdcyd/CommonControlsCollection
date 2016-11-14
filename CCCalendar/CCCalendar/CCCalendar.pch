@@ -1,0 +1,18 @@
+//
+//  CCCalender.pch
+//  CCCalendar
+//
+//  Created by wsk on 2016/11/14.
+//  Copyright © 2016年 cyd. All rights reserved.
+//
+
+#ifndef CCCalender_pch
+#define CCCalender_pch
+
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) printf("function: %s [Line: %d]: %s\n", __PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(...)
+#endif
+
+#endif /* CCCalender_pch */
