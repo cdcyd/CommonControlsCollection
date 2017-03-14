@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
 #import "MainTabBarViewController.h"
 
 @interface AppDelegate ()
@@ -18,14 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    /**
-     *  MainTabBarViewController 点击item时，立即跳转，没有动画效果
-     *
-     *  MainViewController 点击item时，跳转有动画效果
-     */
+   
     MainTabBarViewController *vc = [[MainTabBarViewController alloc]init];
-//    MainViewController *vc = [[MainViewController alloc]init];
-    
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
     self.window.rootViewController = nav;
     

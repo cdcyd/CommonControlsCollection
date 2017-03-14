@@ -15,7 +15,6 @@
 		7C85FC3E1D6AB565002374C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C85FC3C1D6AB565002374C2 /* LaunchScreen.storyboard */; };
 		7C85FC491D6AB565002374C2 /* CCSildeTabBarControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FC481D6AB565002374C2 /* CCSildeTabBarControllerTests.m */; };
 		7C85FC541D6AB565002374C2 /* CCSildeTabBarControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FC531D6AB565002374C2 /* CCSildeTabBarControllerUITests.m */; };
-		7CA6B64B1D6AB88A00AA7728 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B64A1D6AB88A00AA7728 /* MainViewController.m */; };
 		7CA6B64E1D6AB8AC00AA7728 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B64D1D6AB8AC00AA7728 /* MainTabBarViewController.m */; };
 		7CA6B6521D6AB8DD00AA7728 /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B6511D6AB8DD00AA7728 /* TransitionAnimation.m */; };
 		7CA6B6551D6AB8F800AA7728 /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B6541D6AB8F800AA7728 /* TransitionController.m */; };
@@ -60,8 +59,6 @@
 		7C85FC4F1D6AB565002374C2 /* CCSildeTabBarControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCSildeTabBarControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C85FC531D6AB565002374C2 /* CCSildeTabBarControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCSildeTabBarControllerUITests.m; sourceTree = "<group>"; };
 		7C85FC551D6AB565002374C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7CA6B6491D6AB88A00AA7728 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		7CA6B64A1D6AB88A00AA7728 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		7CA6B64C1D6AB8AC00AA7728 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
 		7CA6B64D1D6AB8AC00AA7728 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		7CA6B6501D6AB8DD00AA7728 /* TransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimation.h; sourceTree = "<group>"; };
@@ -174,8 +171,6 @@
 		7CA6B6481D6AB86C00AA7728 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				7CA6B6491D6AB88A00AA7728 /* MainViewController.h */,
-				7CA6B64A1D6AB88A00AA7728 /* MainViewController.m */,
 				7CA6B64C1D6AB8AC00AA7728 /* MainTabBarViewController.h */,
 				7CA6B64D1D6AB8AC00AA7728 /* MainTabBarViewController.m */,
 			);
@@ -274,11 +269,12 @@
 		7C85FC201D6AB565002374C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = cyd;
 				TargetAttributes = {
 					7C85FC271D6AB565002374C2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 25AP33B4X5;
 					};
 					7C85FC431D6AB565002374C2 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -353,7 +349,6 @@
 				7C85FC2D1D6AB565002374C2 /* main.m in Sources */,
 				7CA6B65C1D6AB93A00AA7728 /* 壹ViewController.m in Sources */,
 				7CA6B64E1D6AB8AC00AA7728 /* MainTabBarViewController.m in Sources */,
-				7CA6B64B1D6AB88A00AA7728 /* MainViewController.m in Sources */,
 				7C85FC391D6AB565002374C2 /* CCSildeTabBarController.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,8 +418,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -467,8 +464,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -495,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 25AP33B4X5;
 				INFOPLIST_FILE = CCSildeTabBarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyd.ios.CCSildeTabBarController;
@@ -506,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 25AP33B4X5;
 				INFOPLIST_FILE = CCSildeTabBarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyd.ios.CCSildeTabBarController;

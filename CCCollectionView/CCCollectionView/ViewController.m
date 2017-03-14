@@ -19,7 +19,7 @@
     [super viewDidLoad];
     [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"MY_CELL"];
     [self.collectionView reloadData];
-    self.collectionView.backgroundColor = [UIColor blueColor];
+    self.collectionView.backgroundColor = [UIColor grayColor];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section;

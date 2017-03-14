@@ -13,7 +13,7 @@
 +(instancetype)buttonWithType:(UIButtonType)buttonType{
     CCButton *ccButton = [super buttonWithType:buttonType];
     if (ccButton) {
-        ccButton.titleLabel.backgroundColor = [UIColor brownColor];
+        ccButton.titleLabel.backgroundColor = [UIColor blueColor];
         ccButton.titleLabel.textAlignment = NSTextAlignmentCenter;
         ccButton.imageView.layer.masksToBounds = YES;
     }

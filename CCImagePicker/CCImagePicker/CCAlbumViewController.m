@@ -11,7 +11,7 @@
 #import "CCPageViewController.h"
 #import "CCAssetManager.h"
 
-@interface CCAlbumViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,CCAlbumViewControllerDelegate>
+@interface CCAlbumViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,CDAlbumCollectionViewCellDelegate>
 @property(nonatomic, strong)UICollectionView *collectionView;
 @property(nonatomic, strong)UIView *bottomView;
 @property(nonatomic, strong)UILabel *selectNumLabel;

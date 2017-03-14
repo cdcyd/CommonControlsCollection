@@ -32,7 +32,7 @@ static NSString *kCollectionHeader = @"CCCollectionHeaderView";
 
 @property(nonatomic, strong)UICollectionView *collectionView;
 @property(nonatomic, strong)NSMutableArray<NSDateComponents *> *dataSource;
-@property(nonatomic, strong)NSMutableDictionary<NSIndexPath *, NSString*> *selectIndexPaths;
+@property(nonatomic, strong)NSMutableDictionary<NSString *, NSDate*> *selectIndexPaths;
 
 @end
 
@@ -154,7 +154,8 @@ static NSString *kCollectionHeader = @"CCCollectionHeaderView";
         [cell setContent:realDateComp];
         
         // 设置选中cell的颜色
-        if ([_selectIndexPaths objectForKey:indexPath]) {
+        NSString *key = [NSString stringWithFormat:@"%zd_%zd_%zd",realDateComp.year,realDateComp.month,realDateComp.day];
+        if ([_selectIndexPaths objectForKey:key]) {
             [cell setSelected:YES dateComponents:realDateComp];
         }
         else{
@@ -166,22 +167,34 @@ static NSString *kCollectionHeader = @"CCCollectionHeaderView";
 
 #pragma mark - UICollectionViewDelegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    [_selectIndexPaths setObject:@"indexPath" forKey:indexPath];
-    
     NSDateComponents *realDateComp = [self getRealDateComponentFromDataSource:indexPath];
-    CCCollectionViewCell *cell = (CCCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    [cell setSelected:YES dateComponents:realDateComp];
+    NSString *key = [NSString stringWithFormat:@"%zd_%zd_%zd",realDateComp.year,realDateComp.month,realDateComp.day];
     
+    CCCollectionViewCell *cell = (CCCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    if ([self.selectIndexPaths objectForKey:key]) {
+        [cell setSelected:NO dateComponents:realDateComp];
+        [self.selectIndexPaths removeObjectForKey:key];
+    }
+    else{
+        [cell setSelected:YES dateComponents:realDateComp];
+        [self.selectIndexPaths setObject:[realDateComp.calendar dateFromComponents:realDateComp] forKey:key];
+    }
     [self updateSelectedItems];
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-    [_selectIndexPaths removeObjectForKey:indexPath];
-    
     NSDateComponents *realDateComp = [self getRealDateComponentFromDataSource:indexPath];
-    CCCollectionViewCell *cell = (CCCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    [cell setSelected:NO dateComponents:realDateComp];
+    NSString *key = [NSString stringWithFormat:@"%zd_%zd_%zd",realDateComp.year,realDateComp.month,realDateComp.day];
     
+    CCCollectionViewCell *cell = (CCCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    if ([self.selectIndexPaths objectForKey:key]) {
+        [cell setSelected:NO dateComponents:realDateComp];
+        [self.selectIndexPaths removeObjectForKey:key];
+    }
+    else{
+        [cell setSelected:YES dateComponents:realDateComp];
+        [self.selectIndexPaths setObject:[realDateComp.calendar dateFromComponents:realDateComp] forKey:key];
+    }
     [self updateSelectedItems];
 }
 
@@ -203,7 +216,7 @@ static NSString *kCollectionHeader = @"CCCollectionHeaderView";
         NSIndexSet *indexes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0,dateArr.count)];
         [_dataSource insertObjects:dateArr atIndexes:indexes];
         [_collectionView reloadData];
-        
+
         CGFloat allHeight = dateArr.count * kHeaderViewHeight;
         for (int i = 0 ; i < dateArr.count; i ++) {
             allHeight += [CCDateManager numberWeeksOfMonth:[dateArr[i].calendar dateFromComponents:dateArr[i]]] * kCellHeight;
@@ -229,21 +242,18 @@ static NSString *kCollectionHeader = @"CCCollectionHeaderView";
     }
 }
 
-#pragma mark - Private methods
-// 更新选中的cell
+#pragma mark - Private Methods
+// 更新当前选中的所有日期
 -(void)updateSelectedItems{
     [_selectedLunarDates removeAllObjects];
     [_selectedDates removeAllObjects];
-    for (NSIndexPath *indexPath in [self.selectIndexPaths allKeys]) {
-        NSDateComponents *realDateComp = [self getRealDateComponentFromDataSource:indexPath];
-        NSDate *date = [realDateComp.calendar dateFromComponents:realDateComp];
+    for (NSDate *date in [self.selectIndexPaths allValues]) {
         [_selectedDates addObject:date];
-        CCChineseCalendarModel *lunarModel = [CCChineseCalendar getChineseCalenderWithDate:date];
-        [_selectedLunarDates addObject:lunarModel];
+        [_selectedLunarDates addObject:[CCChineseCalendar getChineseCalenderWithDate:date]];
     }
 }
 
-// 更新当前最上面cell的日期
+// 更新当前滑动到的年份
 -(void)updateCurrentVisibleCellDate:(NSIndexPath *)indexPath{
     NSDateComponents *realDateComp = [self getRealDateComponentFromDataSource:indexPath];
     NSDate *date = [realDateComp.calendar dateFromComponents:realDateComp];

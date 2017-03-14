@@ -11,22 +11,33 @@
 
 @interface ViewController ()
 
+@property(nonatomic,assign)NSInteger titleIndex;
+
 @end
 
 @implementation ViewController
 
+-(instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.titleIndex = 0;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSArray *colors = @[[UIColor purpleColor],[UIColor orangeColor],[UIColor brownColor],[UIColor blueColor],[UIColor greenColor],[UIColor yellowColor],[UIColor redColor]];
-    self.view.backgroundColor = colors[arc4random()%7];
+    self.view.backgroundColor = colors[self.titleIndex%7];
     
-    if(self.titles == 0) {
+    if(self.titleIndex == 0) {
         self.title = @"首页";
     }
     else{
-        self.title = [NSString stringWithFormat:@"第%ld页",(long)self.titles];
+        self.title = [NSString stringWithFormat:@"第%ld页",(long)self.titleIndex];
     }
-    self.titles++;
+    self.titleIndex++;
     
     UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
     nextButton.frame = CGRectMake(0, 00, 80, 40);
@@ -37,7 +48,7 @@
 
 -(void)buttonClick:(UIButton *)btn{
     ViewController *vc = [[ViewController alloc]init];
-    vc.titles = self.titles;
+    vc.titleIndex = self.titleIndex;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

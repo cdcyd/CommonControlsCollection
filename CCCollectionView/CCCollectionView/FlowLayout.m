@@ -11,10 +11,10 @@
 @implementation FlowLayout
 
 - (CGSize)collectionViewContentSize{
-    // 返回CollertionView的滚动的总大小
-    //    CGFloat contentWidth = self.collectionView.bounds.size.width;
-    //    CGFloat contentHeight = self.collectionView.bounds.size.height * 10;
-    //    CGSize contentSize = CGSizeMake(contentWidth, contentHeight);
+//    // 返回CollertionView的滚动的总大小
+//    CGFloat contentWidth = self.collectionView.bounds.size.width;
+//    CGFloat contentHeight = self.collectionView.bounds.size.height * 10;
+//    CGSize contentSize = CGSizeMake(contentWidth, contentHeight);
     return [self collectionView].frame.size;
 }
 
@@ -28,7 +28,6 @@
         UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
         [layoutAttributes addObject:attributes];
     }
-    
     return layoutAttributes;
 }
 
@@ -61,6 +60,5 @@
 //    }
 //    return attribute;
 //}
-
 
 @end

@@ -218,12 +218,12 @@
 		7C5329DD1D8E28D000D93596 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = cyd;
 				TargetAttributes = {
 					7C5329E41D8E28D000D93596 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9C283KM7PP;
+						DevelopmentTeam = 25AP33B4X5;
 						ProvisioningStyle = Automatic;
 					};
 					7C532A001D8E28D000D93596 = {
@@ -369,6 +369,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -416,6 +417,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -443,7 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9C283KM7PP;
+				DEVELOPMENT_TEAM = 25AP33B4X5;
 				INFOPLIST_FILE = CCButtton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -456,7 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9C283KM7PP;
+				DEVELOPMENT_TEAM = 25AP33B4X5;
 				INFOPLIST_FILE = CCButtton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -534,6 +536,7 @@
 				7C532A171D8E28D000D93596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C532A181D8E28D000D93596 /* Build configuration list for PBXNativeTarget "CCButttonTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +545,7 @@
 				7C532A1A1D8E28D000D93596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C532A1B1D8E28D000D93596 /* Build configuration list for PBXNativeTarget "CCButttonUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +554,7 @@
 				7C532A1D1D8E28D000D93596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

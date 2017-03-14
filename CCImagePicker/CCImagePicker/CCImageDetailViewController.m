@@ -9,7 +9,7 @@
 #import "CCImageDetailViewController.h"
 #import "CCAssetManager.h"
 
-@interface CCImageDetailViewController ()<UIScrollViewDelegate>
+@interface CCImageDetailViewController ()
 
 @property(nonatomic, strong)UIScrollView *scrollView;
 @property(nonatomic, strong)UIImageView  *imgeView;
@@ -37,6 +37,16 @@
     self.view = self.scrollView;
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    _imgeView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    _imgeView.contentMode = UIViewContentModeScaleAspectFit;
+    _imgeView.image = [[CCAssetManager sharedInstance] photoAtIndex:_pageIndex];
+    [self.view addSubview:_imgeView];
+}
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.parentViewController.parentViewController.title = [NSString stringWithFormat:@"%@ / %@", [@(self.pageIndex+1) stringValue], [@([[CCAssetManager sharedInstance] photoCount]) stringValue]];
@@ -45,16 +55,12 @@
 -(UIScrollView *)scrollView
 {
     if (_scrollView == nil) {
-        _scrollView = [[UIScrollView alloc]init];
+        _scrollView = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.bouncesZoom = YES;
         _scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
-        _scrollView.delegate = self;
-        
-        _imgeView = [[UIImageView alloc]initWithImage:[[CCAssetManager sharedInstance] photoAtIndex:_pageIndex]];
-        _imgeView.contentMode = UIViewContentModeScaleAspectFill;
-        [_scrollView addSubview:_imgeView];
+        _scrollView.backgroundColor = [UIColor blackColor];
     }
     return _scrollView;
 }
