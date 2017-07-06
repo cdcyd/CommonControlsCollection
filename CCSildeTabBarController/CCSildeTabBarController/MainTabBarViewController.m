@@ -111,7 +111,7 @@
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController animationControllerForTransitionFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
-//    // 打开注释 可以屏蔽点击item时调整的动画效果
+    // 打开注释 可以屏蔽点击item时的动画效果
 //    if (self.panGestureRecognizer.state == UIGestureRecognizerStateBegan || self.panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
         NSArray *viewControllers = tabBarController.viewControllers;
         if ([viewControllers indexOfObject:toVC] > [viewControllers indexOfObject:fromVC]) {
@@ -134,7 +134,6 @@
         return nil;
     }
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
