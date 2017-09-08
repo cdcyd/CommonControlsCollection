@@ -116,9 +116,9 @@
 		7C85FBE81D6AB518002374C2 /* CCInteractiveTransitionAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				7CA6B6691D6AC07A00AA7728 /* NavigationController */,
 				7CA6B66D1D6AC0AF00AA7728 /* Animation */,
 				7CA6B6751D6AC11A00AA7728 /* AniamtionController */,
+				7CA6B6691D6AC07A00AA7728 /* NavigationController */,
 				7C85FBEC1D6AB518002374C2 /* AppDelegate.h */,
 				7C85FBED1D6AB518002374C2 /* AppDelegate.m */,
 				7C85FBEF1D6AB518002374C2 /* ViewController.h */,
