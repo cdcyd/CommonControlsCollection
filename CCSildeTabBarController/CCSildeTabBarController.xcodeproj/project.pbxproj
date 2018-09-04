@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DC5A9BB213E88C90011D60B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5A9BA213E88C90011D60B /* DetailViewController.m */; };
+		0DC5A9BE213E8B820011D60B /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5A9BD213E8B820011D60B /* NavigationViewController.m */; };
+		0DC5A9C1213E8C2F0011D60B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5A9C0213E8C2F0011D60B /* ViewController.m */; };
 		7C85FC2D1D6AB565002374C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FC2C1D6AB565002374C2 /* main.m */; };
 		7C85FC301D6AB565002374C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FC2F1D6AB565002374C2 /* AppDelegate.m */; };
 		7C85FC361D6AB565002374C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C85FC341D6AB565002374C2 /* Main.storyboard */; };
@@ -19,11 +22,6 @@
 		7CA6B6521D6AB8DD00AA7728 /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B6511D6AB8DD00AA7728 /* TransitionAnimation.m */; };
 		7CA6B6551D6AB8F800AA7728 /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B6541D6AB8F800AA7728 /* TransitionController.m */; };
 		7CA6B6591D6AB91800AA7728 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B6581D6AB91800AA7728 /* BaseViewController.m */; };
-		7CA6B65C1D6AB93A00AA7728 /* 壹ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B65B1D6AB93A00AA7728 /* 壹ViewController.m */; };
-		7CA6B65F1D6AB94900AA7728 /* 贰ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B65E1D6AB94900AA7728 /* 贰ViewController.m */; };
-		7CA6B6621D6AB95800AA7728 /* 叁ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B6611D6AB95800AA7728 /* 叁ViewController.m */; };
-		7CA6B6651D6AB96200AA7728 /* 肆ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B6641D6AB96200AA7728 /* 肆ViewController.m */; };
-		7CA6B6681D6AB96C00AA7728 /* 伍ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6B6671D6AB96C00AA7728 /* 伍ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DC5A9B9213E88C90011D60B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0DC5A9BA213E88C90011D60B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0DC5A9BC213E8B820011D60B /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		0DC5A9BD213E8B820011D60B /* NavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		0DC5A9BF213E8C2F0011D60B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0DC5A9C0213E8C2F0011D60B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7C85FC281D6AB565002374C2 /* CCSildeTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCSildeTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C85FC2C1D6AB565002374C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C85FC2E1D6AB565002374C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,16 +71,6 @@
 		7CA6B6541D6AB8F800AA7728 /* TransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionController.m; sourceTree = "<group>"; };
 		7CA6B6571D6AB91800AA7728 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		7CA6B6581D6AB91800AA7728 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		7CA6B65A1D6AB93A00AA7728 /* 壹ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "壹ViewController.h"; sourceTree = "<group>"; };
-		7CA6B65B1D6AB93A00AA7728 /* 壹ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "壹ViewController.m"; sourceTree = "<group>"; };
-		7CA6B65D1D6AB94900AA7728 /* 贰ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "贰ViewController.h"; sourceTree = "<group>"; };
-		7CA6B65E1D6AB94900AA7728 /* 贰ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "贰ViewController.m"; sourceTree = "<group>"; };
-		7CA6B6601D6AB95800AA7728 /* 叁ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "叁ViewController.h"; sourceTree = "<group>"; };
-		7CA6B6611D6AB95800AA7728 /* 叁ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "叁ViewController.m"; sourceTree = "<group>"; };
-		7CA6B6631D6AB96200AA7728 /* 肆ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "肆ViewController.h"; sourceTree = "<group>"; };
-		7CA6B6641D6AB96200AA7728 /* 肆ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "肆ViewController.m"; sourceTree = "<group>"; };
-		7CA6B6661D6AB96C00AA7728 /* 伍ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "伍ViewController.h"; sourceTree = "<group>"; };
-		7CA6B6671D6AB96C00AA7728 /* 伍ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "伍ViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +121,8 @@
 		7C85FC2A1D6AB565002374C2 /* CCSildeTabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				7CA6B6561D6AB8FD00AA7728 /* SubViewController */,
 				7CA6B64F1D6AB8B000AA7728 /* Animation */,
+				7CA6B6561D6AB8FD00AA7728 /* SubViewController */,
 				7CA6B6481D6AB86C00AA7728 /* TabBarController */,
 				7C85FC2E1D6AB565002374C2 /* AppDelegate.h */,
 				7C85FC2F1D6AB565002374C2 /* AppDelegate.m */,
@@ -180,10 +174,10 @@
 		7CA6B64F1D6AB8B000AA7728 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				7CA6B6501D6AB8DD00AA7728 /* TransitionAnimation.h */,
-				7CA6B6511D6AB8DD00AA7728 /* TransitionAnimation.m */,
 				7CA6B6531D6AB8F800AA7728 /* TransitionController.h */,
 				7CA6B6541D6AB8F800AA7728 /* TransitionController.m */,
+				7CA6B6501D6AB8DD00AA7728 /* TransitionAnimation.h */,
+				7CA6B6511D6AB8DD00AA7728 /* TransitionAnimation.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -191,18 +185,14 @@
 		7CA6B6561D6AB8FD00AA7728 /* SubViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0DC5A9BF213E8C2F0011D60B /* ViewController.h */,
+				0DC5A9C0213E8C2F0011D60B /* ViewController.m */,
 				7CA6B6571D6AB91800AA7728 /* BaseViewController.h */,
 				7CA6B6581D6AB91800AA7728 /* BaseViewController.m */,
-				7CA6B65A1D6AB93A00AA7728 /* 壹ViewController.h */,
-				7CA6B65B1D6AB93A00AA7728 /* 壹ViewController.m */,
-				7CA6B65D1D6AB94900AA7728 /* 贰ViewController.h */,
-				7CA6B65E1D6AB94900AA7728 /* 贰ViewController.m */,
-				7CA6B6601D6AB95800AA7728 /* 叁ViewController.h */,
-				7CA6B6611D6AB95800AA7728 /* 叁ViewController.m */,
-				7CA6B6631D6AB96200AA7728 /* 肆ViewController.h */,
-				7CA6B6641D6AB96200AA7728 /* 肆ViewController.m */,
-				7CA6B6661D6AB96C00AA7728 /* 伍ViewController.h */,
-				7CA6B6671D6AB96C00AA7728 /* 伍ViewController.m */,
+				0DC5A9B9213E88C90011D60B /* DetailViewController.h */,
+				0DC5A9BA213E88C90011D60B /* DetailViewController.m */,
+				0DC5A9BC213E8B820011D60B /* NavigationViewController.h */,
+				0DC5A9BD213E8B820011D60B /* NavigationViewController.m */,
 			);
 			name = SubViewController;
 			sourceTree = "<group>";
@@ -338,16 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CA6B6621D6AB95800AA7728 /* 叁ViewController.m in Sources */,
 				7CA6B6551D6AB8F800AA7728 /* TransitionController.m in Sources */,
+				0DC5A9BE213E8B820011D60B /* NavigationViewController.m in Sources */,
 				7CA6B6591D6AB91800AA7728 /* BaseViewController.m in Sources */,
-				7CA6B65F1D6AB94900AA7728 /* 贰ViewController.m in Sources */,
 				7CA6B6521D6AB8DD00AA7728 /* TransitionAnimation.m in Sources */,
-				7CA6B6681D6AB96C00AA7728 /* 伍ViewController.m in Sources */,
 				7C85FC301D6AB565002374C2 /* AppDelegate.m in Sources */,
-				7CA6B6651D6AB96200AA7728 /* 肆ViewController.m in Sources */,
+				0DC5A9C1213E8C2F0011D60B /* ViewController.m in Sources */,
 				7C85FC2D1D6AB565002374C2 /* main.m in Sources */,
-				7CA6B65C1D6AB93A00AA7728 /* 壹ViewController.m in Sources */,
+				0DC5A9BB213E88C90011D60B /* DetailViewController.m in Sources */,
 				7CA6B64E1D6AB8AC00AA7728 /* MainTabBarViewController.m in Sources */,
 				7C85FC391D6AB565002374C2 /* CCSildeTabBarController.xcdatamodeld in Sources */,
 			);

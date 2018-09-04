@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarViewController.h"
+#import "NavigationViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    MainTabBarViewController *vc = [[MainTabBarViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    MainTabBarViewController *mvc = [[MainTabBarViewController alloc]init];
+    NavigationViewController *nav = [[NavigationViewController alloc]initWithRootViewController:mvc];
     self.window.rootViewController = nav;
     
     return YES;

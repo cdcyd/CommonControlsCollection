@@ -7,14 +7,9 @@
 //
 
 #import "MainTabBarViewController.h"
-#import "TransitionAnimation.h"
 #import "TransitionController.h"
-
-#import "壹ViewController.h"
-#import "贰ViewController.h"
-#import "叁ViewController.h"
-#import "肆ViewController.h"
-#import "伍ViewController.h"
+#import "TransitionAnimation.h"
+#import "ViewController.h"
 
 @interface MainTabBarViewController ()<UITabBarControllerDelegate>
 
@@ -26,17 +21,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.delegate = self;
     self.selectedIndex = 0;
     [self.view addGestureRecognizer:self.panGestureRecognizer];
-    
-    壹ViewController *vc1 = [[壹ViewController alloc]init];
-    贰ViewController *vc2 = [[贰ViewController alloc]init];
-    叁ViewController *vc3 = [[叁ViewController alloc]init];
-    肆ViewController *vc4 = [[肆ViewController alloc]init];
-    伍ViewController *vc5 = [[伍ViewController alloc]init];
-    self.viewControllers = @[vc1,vc2,vc3,vc4,vc5];
+
+    NSArray<UIColor *> *colors = @[[UIColor orangeColor], [UIColor redColor], [UIColor blueColor], [UIColor yellowColor], [UIColor purpleColor]];
+    NSMutableArray *vcs = [[NSMutableArray alloc] init];
+    for (UIColor *color in colors) {
+        ViewController *vc = [[ViewController alloc]init];
+        vc.view.backgroundColor = color;
+        [vcs addObject:vc];
+    }
+    self.viewControllers = vcs;
     
     for (int i = 0; i < self.tabBar.items.count; i ++) {
         NSDictionary *dic = @{NSForegroundColorAttributeName: [UIColor colorWithRed:0.451 green:0.553 blue:0.584 alpha:1.00]};
@@ -66,7 +62,6 @@
                 break;
         }
     }
-    
 }
 
 - (UIPanGestureRecognizer *)panGestureRecognizer{
@@ -94,20 +89,6 @@
     else if (translation.x < 0.f && self.selectedIndex + 1 < self.viewControllers.count) {
         self.selectedIndex ++;
     } 
-    else {
-        if (!CGPointEqualToPoint(translation, CGPointZero)) {
-            sender.enabled = NO;
-            sender.enabled = YES;
-        }
-    }
-    
-    [self.transitionCoordinator animateAlongsideTransitionInView:self.view animation:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        
-    } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        if ([context isCancelled] && sender.state == UIGestureRecognizerStateChanged){
-            [self beginInteractiveTransitionIfPossible:sender];
-        }
-    }];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController animationControllerForTransitionFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
@@ -139,15 +120,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

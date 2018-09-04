@@ -11,8 +11,9 @@
 @interface TransitionController()
 
 @property (nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
+
 @property (nonatomic, strong, readonly) UIPanGestureRecognizer *gestureRecognizer;
-@property (nonatomic, readwrite) CGPoint initialLocationInContainerView;
+
 @property (nonatomic, readwrite) CGPoint initialTranslationInContainerView;
 
 @end
@@ -38,7 +39,6 @@
 
 - (void)startInteractiveTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     self.transitionContext = transitionContext;
-    self.initialLocationInContainerView = [self.gestureRecognizer locationInView:transitionContext.containerView];
     self.initialTranslationInContainerView = [self.gestureRecognizer translationInView:transitionContext.containerView];
     [super startInteractiveTransition:transitionContext];
 }
